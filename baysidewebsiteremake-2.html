@@ -6,11 +6,14 @@
 <style type = "text/css">
 
 /*header */
-	
+	a{
+		color: orange;
+	}
 	#header{
-		background-color:black;
+		background-color:white;
 		width: 100%;
 		padding: 30px;
+		
 		
 	}
 	#quickLinks {
@@ -24,7 +27,7 @@
 		margin-right: 10px;
 	}
 	#logo { 
-		background-color: yellow;
+		background-color: ;
 		width: 100%;
 		 
 	}
@@ -32,23 +35,56 @@
 	#logo img{
 		width : 100%;
 	}
-	#navigation { 
-		background-color: white;
-		clear: both;
-		padding: 5px;
-	}
-	#navigation a{
-		background-color: blue;
-		height: 50px;
-		width: 12.3%;
-		text-decoration: none;
-		color: white;
-		display: inline-block;
-		text-align: center;
-	}
 	
+
+
+#navigation ul {
+    font-family: Arial, Verdana;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+#navigation ul li {
+    display: block;
+    position: relative;
+    float: left;
+    width: 12.3%
+}
+#navigation li ul {
+    display: none;
+    width: auto;
+}
+#navigation ul li a {
+    display: block;
+    text-decoration: none;
+    color: #ffffff;
+    border-top: 1px solid #ffffff;
+    padding: 5px 15px 5px 15px;
+    background: blue;
+    margin-left: 1px;
+    white-space: nowrap;
+}
+#navigation ul li a:hover {
+background: orange;
+}
+#navigation li:hover ul {
+    display: block;
+    position: absolute;
+    width: auto;
+}
+#navigation li:hover li {
+    float: none;
+    font-size: 11px;
+    width: auto;
+}
+#navigation li:hover a { background: blue; }
+#navigation li:hover li a:hover {
+    background: orange;
+}
+
 	#login { 
-		background-color: red;
+		background-color: gray;
 		width: 100%;
 		height: 50px; 
 	}
@@ -72,13 +108,13 @@
 /* main  */
 	
 	#main{
-		background-color:black;
+		background-color:white;
 		width: 100%;
 		padding: 30px;
 		overflow: hidden;
 	}
 	#announcements {
-		background-color: orange;
+		background-color: white;
 		width: 80%;
 		float: left;
 	}
@@ -89,28 +125,45 @@
 	
 	}
 	#socialLinks { 
-		background-color: yellow;
-		width: 20%; 
+		background-color: white;
+		width: 18%; 
 		float: left;
+		border: 5px solid orange;
 	}
 	#events { 
-		background-color: blue;
+		background-color: orange;
+		width: 18%;
+		float: left;
+		padding: 5px;
+		margin-bottom: 10px;
+	}
+	#events div{
+		background-color: orange;
+	}
+	#events p{
+		border: 1px solid yellow;
+		
+	}
+	
+	#links{
+		
+		background-color: white;
 		width: 20%;
 		float: left;
 	}
-	#links { 
-		background-color: red;
-		width: 20%;
-		height: 50px; 
-		float: left;
+	#links div{
+		background-color: orange;
 	}
 	
 	#baysidePublication{
-		background-color: orange;
+		background-color: white;
 		width: 20%;
-		height: 50px;
 		float: left;
 	
+	}
+	
+	#baysidePublication h2{
+		background-color: orange;
 	}
 	
 	#weather{
@@ -124,33 +177,16 @@
 /*  footer  */
 	
 	#footer{
-		background-color:black;
+		background-color: grey;
 		width: 100%;
-		padding: 30px;
 		float: left;
+		border: 20px solid white;
 	}
-	#address {
-		background-color: orange;
-		width: 100%;
-		height: 50px;
-		float: left;
-	}
-	#companyLogo { 
-		background-color: yellow;
-		width: 100%;
-		height: 50px; 
-		float: left;
-	}
-	#companyLinks { 
-		background-color: blue;
-		width: 100%;
-		height: 50px;
-		float: left;
-	}
+	
 	#selectLanguage { 
 		background-color: red;
 		width: 100%;
-		height: 50px; 
+		 
 		float: left;
 	}
 
@@ -164,24 +200,110 @@
 <!-- Header: Quick Links, logo, navigation, login -->
 <div id = "header" > 
 	<div id = "quickLinks" >
-		<a href = ""> School Home</a>
-		<a href = "http://www.baysidehighschool.org/login"> Login</a>
-		<a href = "http://www.baysidehighschool.org/help"> Help </a>
+		<a href = ""> School Home></a>
+		<a href = "http://www.baysidehighschool.org/login"> Login></a>
+		<a href = "http://www.baysidehighschool.org/help"> Help ></a>
 		<a href = "http://www.baysidehighschool.org/search"> Search </a>
 	</div>
 	<div id = "logo" >
 			<img src = "http://static3.echalk.net/www/bayside/site/layout/HS495_CONTEMPORARY_02.jpg"> </img>
 	</div>
 	<div id = "navigation" > 
-		<a href = "http://www.baysidehighschool.org/site_res_view_folder.aspx?id=42bf9055-816a-4a07-908f-9ea9b70851f7"> Directory </a>
-		<a href = "http://www.baysidehighschool.org/site_res_view_folder.aspx?id=42bf9055-816a-4a07-908f-9ea9b70851f7"> About BHS</a>
-		<a href = "http://www.baysidehighschool.org/calendar_month.aspx?id=30f22543-4e12-4655-acad-f46af3d77c6e">Calender </a>
-		<a href = "http://www.baysidehighschool.org/site_res_view_folder.aspx?id=dc2c77d3-5343-4699-bbf9-d2d1d2373188">Academics </a>
-		<a href = "http://www.baysidehighschool.org/site_res_view_folder.aspx?id=4e0cb9af-d845-4299-ba4c-6f7c66b36a48">Students </a>
-		<a href = "http://www.baysidehighschool.org/site_res_view_folder.aspx?id=c434d558-e9bf-424c-b439-34279ed55bed">Parents </a>
-		<a href = "http://www.baysidehighschool.org/site_res_view_folder.aspx?id=9e58a4cf-6fa4-41c2-9784-62f283ef7c85">Library </a>
-		<a href = "http://www.baysidehighschool.org/site_res_view_folder.aspx?id=277d601c-da04-40ed-8485-ad4a2a5c3ab7">Guidance </a>
 	
+		<ul>
+		
+			<li><a href = "http://www.baysidehighschool.org/site_res_view_folder.aspx?id=42bf9055-816a-4a07-908f-9ea9b70851f7"> Directory </a>
+				<ul>
+					<li><a href="http://www.baysidehighschool.org/site_faculty.aspx">Faculty & Staff </a>	</li>
+					<li><a href="http://www.baysidehighschool.org/site_classes.aspx">Class Pages </a>	</li>
+					<li><a href="http://www.baysidehighschool.org/site_groups.aspx">Group Pages </a>	</li>
+				</ul>
+			</li>
+		
+			<li><a href = "http://www.baysidehighschool.org/site_res_view_folder.aspx?id=42bf9055-816a-4a07-908f-9ea9b70851f7"> About BHS</a>
+				<ul>
+					<li><a href="http://www.baysidehighschool.org/www/bayside/site/hosting/BHS%20Bell%20Schedule%202014-15.pdf">Bell Schedule </a>	</li>
+					<li><a href="http://www.baysidehighschool.org/www/bayside/site/hosting/Calendar-%20Fall%20-%202014.pdf">Calender-Fall 2014 </a>	</li>
+					<li><a href="http://schools.nyc.gov/RulesPolicies/DisciplineCode/default.htm">Discipline Code </a>	</li>
+					<li><a href="http://www.baysidehighschool.org/www/bayside/site/hosting/dresscode.pdf">Dress Code </a>	</li>
+					<li><a href="http://www.baysidehighschool.org/www/bayside/site/hosting/history2.gif">History in Photographs </a>	</li>
+					<li><a href="http://www.baysidehighschool.org/www/bayside/site/hosting/ZERO%20TOLERANCE%20200809.doc">Zero Tolerance Letter </a>	</li>
+				</ul>
+			
+			</li>
+			<li><a href = "http://www.baysidehighschool.org/calendar_month.aspx?id=30f22543-4e12-4655-acad-f46af3d77c6e">Calender </a>
+				
+			</li>
+			<li><a href = "http://www.baysidehighschool.org/site_res_view_folder.aspx?id=dc2c77d3-5343-4699-bbf9-d2d1d2373188">Academics </a>
+				<ul>
+					<li><a href="http://www.baysidehighschool.org/site_res_view_template.aspx?id=b13474e5-a534-45c2-9bbf-ab23aac03cc9">Art, Music, and Languages </a>	</li>
+					<li><a href="http://www.baysidehighschool.org/site_res_view_template.aspx?id=d1bbadce-d37e-4db1-aba6-cb6f0f37b6e7">Business Education / Technology </a>	</li>
+					<li><a href="http://www.baysidehighschool.org/site_res_view_template.aspx?id=9e44ee16-8a25-432b-89bc-bad9d66003c0">English/ Language Arts </a>	</li>
+					<li><a href="http://www.baysidehighschool.org/site_res_view_template.aspx?id=45253c7a-fff8-4168-a099-33ab515c3c14">Instructional Support Services </a>	</li>
+					<li><a href="http://www.baysidehighschool.org/site_res_view_template.aspx?id=883c8999-cc57-4f18-aed6-57bb726735c6">Mathematics </a>	</li>
+					<li><a href="http://www.baysidehighschool.org/site_res_view_template.aspx?id=57efe66b-4fa8-42c5-b022-4d6c0ff747e0">Physical Education / Health </a>	</li>
+					<li><a href="http://www.baysidehighschool.org/site_res_view_template.aspx?id=e9b79436-950f-4155-b029-33dd0c4e9c30">Science </a>	</li>
+					<li><a href="http://www.baysidehighschool.org/site_res_view_template.aspx?id=e84cdf5b-893f-49ad-a656-abfc449dc0f0">Social Studies </a>	</li>
+					<li><a href="http://www.baysidehighschool.org/site_res_view_template.aspx?id=cbfc715c-5398-4692-aa46-a84cd6b591f5">Special Programs </a>	</li>
+				</ul>
+			
+			</li>
+			<li><a href = "http://www.baysidehighschool.org/site_res_view_folder.aspx?id=4e0cb9af-d845-4299-ba4c-6f7c66b36a48">Students </a>
+				<ul>
+					<li><a href="http://www.baysidehighschool.org/site_res_view_template.aspx?id=c724c4aa-ed82-48e7-8171-8ae419c0b39c">BHS Juniors </a>	</li>
+					<li><a href="http://www.baysidehighschool.org/site_res_view_template.aspx?id=ed6fa8dc-5654-4fe1-8bdd-5a796abe0940">BHS Seniors </a>	</li>
+					<li><a href="http://www.baysidehighschool.org/www/bayside/site/hosting/My_eChalk_Community_For_Students.pdf">How to Use echalk </a>	</li>
+					<li><a href="http://www.baysidehighschool.org/site_res_view_template.aspx?id=d7f7a12e-1d33-4539-b898-8c8f1257d802">Key Club </a>	</li>
+					<li><a href="http://www.baysidehighschool.org/site_res_view_template.aspx?id=edc79b56-d2b2-4a11-af87-f92efdffede8">Sports Teams </a>	</li>
+					<li><a href="http://www.baysidehighschool.org/site_res_view_template.aspx?id=b7d56ee9-cfb9-4344-90bf-e9a7601ff21c">Student Organization </a>	</li>
+					<li><a href="http://www.baysidehighschool.org/www/bayside/site/hosting/Transcript.pdf">Transcript request Form </a>	</li>
+				</ul>
+			
+			</li>
+			<li><a href = "http://www.baysidehighschool.org/site_res_view_folder.aspx?id=c434d558-e9bf-424c-b439-34279ed55bed">Parents </a>
+				<ul>
+					<li><a href="http://www.baysidehighschool.org/site_res_view_template.aspx?id=e24c7be3-41de-44e6-9580-527d3bb689e5">Parent Resources </a>	</li>
+					<li><a href="http://schools.nyc.gov/Calendar/2013-2014%20School%20Year%20Calendars.htm">NYCDOE 2013-2014 School Year Calendar </a>	</li>
+					<li><a href="http://www.baysidehighschool.org/parents/register">Parent Registration </a>	</li>
+					<li><a href="http://www.baysidehighschool.org/group_profile_view.aspx?id=9e52b74c-cf67-4b63-a605-1e7155c0cfe9">PTA </a>	</li>
+					<li><a href="http://www.baysidehighschool.org/www/bayside/site/hosting/PTA%20EXEC%20BD%202013-2014.pdf">PTA Executive Board 2013-14 </a>	</li>
+					<li><a href="http://www.baysidehighschool.org/www/bayside/site/hosting/SLT%202013-2014%20long%20version.pdf">SLT Members 2013-14 </a>	</li>
+				</ul>
+			
+			</li>
+			<li><a href = "http://www.baysidehighschool.org/site_res_view_folder.aspx?id=9e58a4cf-6fa4-41c2-9784-62f283ef7c85">Library </a>
+				<ul>
+					<li><a href="http://www.baysidehighschool.org/site_res_view_template.aspx?id=8829b819-bf8d-4970-8e57-806a3bf0325e">About the Library </a>	</li>
+					<li><a href="Http://library.nycenet.edu/common/welcome.jsp?site=1322">Books at BHS- Online book Catalog</a>	</li>
+					<li><a href="http://www.baysidehighschool.org/site_res_view_template.aspx?id=d8824aa4-7f6e-4a02-91ed-ce56b1580a9c">Databases </a>	</li>
+					<li><a href="http://www.baysidehighschool.org/site_res_view_template.aspx?id=2ffe6a4e-049f-49a0-9867-d77ca18dc5cf">eBooks </a>	</li>
+					<li><a href="http://www.noodletools.com">Noodle tools- Create a works cited page </a>	</li>
+					<li><a href="http://www.baysidehighschool.org/site_res_view_template.aspx?id=21883780-5239-40bf-b6f4-edef7d4125df">College & Carreer </a>	</li>
+					<li><a href="http://www.baysidehighschool.org/site_res_view_template.aspx?id=3383e581-781c-4ba0-bbca-24ca14cbda35">Homework Help</a>	</li>
+					<li><a href="http://www.baysidehighschool.org/download.axd?file=ebc58911-9f57-4c6d-aa79-25d8f1d20763&dnldType=Resource">MLA Style Guide Handbook </a>	</li>
+					<li><a href="http://www.baysidehighschool.org/site_faculty.aspx">Faculty & Staff </a>	</li>
+					<li><a href="http://www.baysidehighschool.org/site_faculty.aspx">Faculty & Staff </a>	</li>
+				</ul>
+			
+			</li>
+			<li><a href = "http://www.baysidehighschool.org/site_res_view_folder.aspx?id=277d601c-da04-40ed-8485-ad4a2a5c3ab7">Guidance </a>
+				<ul>
+					<li><a href="http://www.baysidehighschool.org/site_faculty.aspx">Faculty & Staff </a>	</li>
+					<li><a href="http://www.baysidehighschool.org/site_faculty.aspx">Faculty & Staff </a>	</li>
+					<li><a href="http://www.baysidehighschool.org/site_faculty.aspx">Faculty & Staff </a>	</li>
+					<li><a href="http://www.baysidehighschool.org/site_faculty.aspx">Faculty & Staff </a>	</li>
+					<li><a href="http://www.baysidehighschool.org/site_faculty.aspx">Faculty & Staff </a>	</li>
+					<li><a href="http://www.baysidehighschool.org/site_faculty.aspx">Faculty & Staff </a>	</li>
+					<li><a href="http://www.baysidehighschool.org/site_faculty.aspx">Faculty & Staff </a>	</li>
+					<li>	<a href="http://www.baysidehighschool.org/site_faculty.aspx">Faculty & Staff </a></li>
+					<li><a href="http://www.baysidehighschool.org/site_faculty.aspx">Faculty & Staff </a>	</li>
+					<li><a href="http://www.baysidehighschool.org/site_faculty.aspx">Faculty & Staff </a>	</li>
+				</ul>
+			
+			</li>
+		
+		
+		</ul>
 	
 	</div>
 	<div id = "login" >
@@ -199,6 +321,7 @@
 <!-- Main:  Announcements, Social links, events, links, bayside publication, weather -->
 <div id = "main" > 
 	<div id = "announcements" >
+		<h1>Daily Announcements</h1>
 		<p><b>eChalk Update </b>- All student accounts have been created and all classes have been uploaded. Students: your user name is your firstname.lastname and your password is your 9 digit OSIS#. If you have any questions, please email smiller@baysidehighschool.org</p>
 
 		<p><b>Pupil Path Update </b> - Incoming students will receive a letter containing their pupil path user names and passwords during their guidance counselor appointment. Parent information (user names and passwords) are also on this letter.</p>		
@@ -402,7 +525,29 @@ You do not need a ticket or an appointment.
 
 	<div id = "links" >
 
+		<div> Quick Links </div>
+		
+		<a href = "http://www.baysidehighschool.org/www/bayside/site/hosting/dresscode.pdf" > Bayside High School Dress Code </a>
+		<br/>
+		
+		<hr/>
+		
 
+		Please sign up to be placed on the <b>Parent Coordinator’s email distribution list.</b>  The form can be found <a href = "http://www.baysidehighschool.org/www/bayside/site/hosting/EMail%20List%20Information%20Sheet.pdf">here. </a>
+
+		<hr/>
+
+		<a href ="http://www.mousesquad.org/squad/bayside-hs-mouse-squad"> <b>MOUSE Squad Tech Support Request </b> </a>
+
+		<hr/>
+
+		<a href= "http://www.baysidehighschool.org/www/bayside/site/hosting/GRP%20letter%20for%202013.pdf">General Response Protocol / Emergency Drill </a> - letter from Mr. Athy
+
+		
+		
+
+		
+	
 
 
 
@@ -411,24 +556,55 @@ You do not need a ticket or an appointment.
 
 
 		
-	<div id = "baysidePublication" > </div>
+	<div id = "baysidePublication" >
+
+		<h2> Bayside Publications </h2>
+		
+		Check out <b> The Baysider: Community Edition </b> - our newest publication!
+		<br/>
+		<!--<a href = "http://www.baysidehighschool.org/www/bayside/site/hosting/june%20final.pdf" width = "10%" height = "10px" background-image = url("http://static3.echalk.net/www/ud00/5/5b7cf86c9cae4dfb955648db6855bb3d/Personal_Images/baysider.gif") display = "block"> <img src = "" /></a> -->
+
+		<a href = "http://www.baysidehighschool.org/www/bayside/site/hosting/june%20final.pdf"> <img width = "100%" src = "http://static3.echalk.net/www/ud00/5/5b7cf86c9cae4dfb955648db6855bb3d/Personal_Images/baysider.gif" /> </a>
+
+		<br/>
+		<hr/> 
+		
+		<img align = "left"  width ="40%" src = "http://static3.echalk.net/www/bayside/images/Front-Back-Cover-2014-1.gif"/><a href ="http://www.baysidehighschool.org/www/bayside/site/hosting/Soundings%202014.pdf">Soundings 2014 </a> <br/>
+	BHS Literary Magazine - If you would like to purchase a copy, please see Ms. Ormaechea in room 131.
+
+	</div>
 	<div id = "weather" > </div>
 
 
 
-</div>
+	</div>
 
 
-<!-- Footer: address, company logo, company links, select language -->
-<div id = "footer" > 
-	<div id = "address" > </div>
-	<div id = "companyLogo" > </div>
-	<div id = "companyLinks" > </div>
+	<!-- Footer: address, company logo, company links, select language -->
+	<div id = "footer" > 
+	
+		Bayside High School, 3224 Corporal Kennedy Street, Bayside, NY 11361-1061 <br/>
+		Phone: (718) 229-7600  |  Fax: (718) 423-9566                 
+		<div align= "right" ><a   href ="http://www.baysidehighschool.org/contact"> Contact Us</a>  | <a  href ="http://www.baysidehighschool.org/userpolicy"> User Policy</a></div>
+		<br/>
+		
+		<a href ="http://www.baysidehighschool.org/directions" > Locate School </a>
+		
+	
+	
+	
+			
+			<a href ="javascript:window.open('https://www.facebook.com/sharer/sharer.php?app_id=1515104188713220&sdk=joey&display=popup&u=http://www.baysidehighschool.org', 'FacebookShareButtonWindow', 'width=600,height=350,location=0,menubar=0,titlebar=0,status=0,toolbar=0,top=200,left=200')" > <img src ="" > </a>       
+			<a href ="" > <img src ="" > </a>
+	
+	
+
+	
 	<div id = "selectLanguage" > </div>
 
 
 
-</div>
+	</div>
 
 
 
